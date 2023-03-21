@@ -2,7 +2,6 @@
 # Setup -------------------------------------------------------------------
 
 library(adehabitatHS)
-library(vegan)
 library(data.table)
 
 
@@ -35,15 +34,15 @@ png('Plots/NicheSpaceBiplot_alt.png', width = 1000, height=2000, res=150)
   par(mfrow=c(3,1)) #set figure to have 3 rows and 1 column
 
   #plot YBM biplot
-  EnfaBiplot(modlist[[1]], weightslist[[1]], key,'Yellow-Bellied Marmot',
+  EnfaBiplot(modlist[[1]],key, 'Yellow-Bellied Marmot',
                 c(3,3,1,3,1,2,2,2,1,3,1,4,1,1))
   
   #GMGS biplot
-  EnfaBiplot(modlist[[2]], weightslist[[2]], key,'Golden Mantled Ground Squirrel',
+  EnfaBiplot(modlist[[2]],  key,'Golden Mantled Ground Squirrel',
            c(1,1,3,1,3,2,2,1,4,4,4,4,3,3), plot_legend=FALSE)
 
   #BGS biplot
-  EnfaBiplot(modlist[[3]], weightslist[[3]], key, "Belding's Ground Squirrel",
+  EnfaBiplot(modlist[[3]], key, "Belding's Ground Squirrel",
                 c(4,3,1,3,3,4,4,2,2,2,1,4,3,1), plot_legend=FALSE)
 
 dev.off()

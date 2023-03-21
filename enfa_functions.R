@@ -78,7 +78,6 @@ EnfaBiplot <- function(mod, id_key, species, lab_pos, offset=0.3,
   #run the function 3 times, each for a different species.
   
   #mod          ENFA model, created using enfa() from adehabitatHS package
-  #w            numeric, weights passed to the ENFA model should be 0 or 1
   #id_key       data.frame, contains the ID numbers for each variable in the model
                   #is saved in data/VariableKey.csv
   #species      character, common name of the species
